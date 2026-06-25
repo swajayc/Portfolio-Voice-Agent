@@ -207,32 +207,32 @@
   
   <div class="section">
     <h1>Swajay's AI Voice Assistant</h1>
-    <div class="tagline">[status: active] // engine_init.sh</div>
+    <div class="tagline">An interactive demo of production-ready, conversational voice agent.</div>
     <div class="main-desc">
-      This is a live deployment of an AI voice assistant configured to assist you with Swajay's skills, past projects, and his overall experience as a Solutions Engineer. This interface demonstrates a production-ready approach to scaling conversational customer discovery.
+      This is a live deployment of an AI voice assistant configured to assist you with Swajay's skills, past projects and his overall experience as a Solutions Engineer.
     </div>
   </div>
 
   <div class="section">
-    <h2>[01] What You Can Ask</h2>
+    <h2>WHAT YOU CAN ASK</h2>
     <div class="ask-grid">
       <div class="ask-item stack">
         <strong>⚡ Experience & Stack</strong>
-        <p>Ask about my 5+ years in enterprise SaaS or request fine-grained technical details regarding specific tools.</p>
+        <p>Ask about 5+ years in enterprise SaaS or details regarding specific tools.</p>
       </div>
       <div class="ask-item scale">
         <strong>🚀 Past Deployments</strong>
-        <p>Inquire about my engineering track record managing over 50 successful Mid-market and enterprise platform implementations.</p>
+        <p>Inquire about my track record managing 50 Mid-market and enterprise deployments.</p>
       </div>
       <div class="ask-item pipeline">
         <strong>📅 Meeting Request</strong>
-        <p>Leave your name, contact info, or a direct message via raw speech. This directly triggers my automated backend infrastructure data pipelines.</p>
+        <p>Leave your name and contact info or a message for me directly via speech to trigger my backend pipeline.</p>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>[02] High-Level Technical Flow</h2>
+    <h2>HIGH-LEVEL TECHNICAL FLOW</h2>
     <div class="terminal-window">
       <div class="terminal-header">
         <div class="mac-dots">
@@ -243,9 +243,9 @@
         <div class="terminal-title">pipeline_telemetry.yaml</div>
       </div>
       <div class="flow-container">
-        <div class="flow-step"><span>01</span>gateway: <strong>Audio Stream Capture</strong> -> <em>sub-2s edge latency</em></div>
-        <div class="flow-step"><span>02</span>runtime: <strong>Context Engine</strong> -> <em>knowledge_base query parsing</em></div>
-        <div class="flow-step"><span>03</span>backend: <strong>Event Webhook</strong> -> <em>asynchronous structured email payload</em></div>
+        <div class="flow-step"><span>01</span>gateway: <strong>Voice Gateway</strong> -> <em>Captures your audio with sub-2-second streaming latency</em></div>
+        <div class="flow-step"><span>02</span>runtime: <strong>Context Engine</strong> -> <em>References my technical knowledge base to address your queries</em></div>
+        <div class="flow-step"><span>03</span>backend: <strong>Event Webhook</strong> -> <em>Parses the call upon hangup and fires structured data to my email</em></div>
       </div>
     </div>
   </div>
@@ -256,13 +256,20 @@
   </div>
 </div>
 
-<script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
-<vapi-widget
-  public-key="9eb6d5f4-0090-44bf-a699-61d9e67f70f4" 
-  assistant-id="dc1a0284-1d89-47a8-8d9d-7c96f1968015"
-  mode="voice"
-  theme="dark"
-></vapi-widget>
+<script>
+  (function (d, t) {
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true; g.async = true;
+    s.parentNode.insertBefore(g, s);
+    g.onload = function() {
+      vapiSDK.run({
+        apiKey: "66e8e586-5413-4493-9d35-3354bc0a6916", // Paste your public API key here
+        assistant: "dc1a0284-1d89-47a8-8d9d-7c96f1f98015" // Your verified Assistant ID
+      });
+    }
+  })(document, "script");
+</script>
 
 </body>
 </html>
