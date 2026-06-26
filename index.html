@@ -256,22 +256,13 @@
   </div>
 </div>
 
-<script>
-  (function (d, t) {
-    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
-    g.defer = true; g.async = true;
-    s.parentNode.insertBefore(g, s);
-    g.onload = function() {
-      vapiSDK.run({
-        apiKey: "66e8e586-5413-4493-9d35-3354bc0a6916",
-        assistant: "dc1a0284-1d89-47a8-8d9d-7c96f1f98015",
-        // Force routing to the EU region if your dashboard has "eu" in the URL
-        baseUrl: "https://api.eu.vapi.ai" 
-      });
-    }
-  })(document, "script");
-</script>
+<script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+<vapi-widget
+  public-key="66e8e586-5413-4493-9d35-3354bc0a6916" 
+  assistant-id="dc1a0284-1d89-47a8-8d9d-7c96f1968015"
+  mode="voice"
+  theme="dark"
+></vapi-widget>
 
 </body>
 </html>
